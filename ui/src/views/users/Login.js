@@ -131,9 +131,12 @@ class Login extends Component {
       <Grid container justify="center">
         <Grid item xs={6} lg={4}>
           <Card>
-            <CardHeader
+            {/* <CardHeader
               title="ChirpStack Login"
-            />
+            /> */}
+            <div style={{textAlign: "center"}}>
+              <img src="/logo/logo_blue.svg" alt="https://www.lanaco.com" />
+            </div>
             <CardContent>
               {!this.state.oidcEnabled && <LoginForm
                 submitLabel="Login"
