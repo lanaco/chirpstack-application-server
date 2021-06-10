@@ -134,6 +134,7 @@ class Login extends Component {
             {/* <CardHeader
               title="ChirpStack Login"
             /> */}
+            
             <div style={{textAlign: "center"}}>
               <img src="/logo/logo_blue.svg" alt="https://www.lanaco.com" />
             </div>
