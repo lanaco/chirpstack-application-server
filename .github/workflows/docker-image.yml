@@ -20,12 +20,12 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: docker.pkg.github.com
-          username: ${{ github.actor }}
+          username: ${{ GITHUB_ACTOR }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build container image
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: |
-            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.ref }}
+            docker.pkg.github.com/${{ github.repository }}:${{ GITHUB_SHA }}
+            docker.pkg.github.com/${{ github.repository }}:${{ GITHUB_SHA }}
